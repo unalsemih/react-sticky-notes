@@ -1,0 +1,163 @@
+body {
+  background-color: #dae9f4;
+}
+
+body * {
+  font-family: 'Crimson Text', serif;
+  font-size: 17px !important;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #311e3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 999999999;
+  position: fixed;
+}
+
+.header .note-type {
+  float: left;
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--color);
+  cursor: pointer;
+}
+
+.header .note-type {
+  background-color: var(--color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+[data-color="no-filter"] {
+  width: auto !important;
+}
+
+[data-color="no-filter"] button {
+  width: auto !important;
+  background-color: gainsboro;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  color: gray;
+}
+
+.main-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.main-screen.editable,
+.main-screen.editable * {
+  cursor: crosshair;
+}
+
+.leave-note-text {
+  background-color: gray;
+  font-size: 10px;
+  transform: translateY(-55%);
+  margin-left: 20px;
+}
+
+.note-container {
+  background: var(--color);
+  border-radius: 5px 10px;
+  color: #fff;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+.note {
+  padding: 10px;
+  min-height: 150px;
+}
+
+.note-box {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
+  max-width: 330px;
+
+}
+
+.note-box-number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-130%));
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.note-box-number:hover {
+  opacity: 1;
+}
+
+.note-box select {
+  width: 100%;
+  appearance: none;
+  border-radius: 3px;
+  height: 40px;
+  padding: 0px 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--color);
+  border: none;
+  cursor: pointer;
+}
+
+.note-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  resize: none;
+}
+
+.note-box button {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  margin-top: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.note-box button[disabled] {
+  opacity: .3;
+}
+
+.note-box textarea:focus {
+  border-color: #000;
+}
+
+.remove-note {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  position: absolute;
+  padding: 2px;
+  cursor: pointer;
+}
