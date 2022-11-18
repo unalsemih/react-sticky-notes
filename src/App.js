@@ -116,7 +116,7 @@ function App() {
         <Header></Header>
         <div ref={screen} tabIndex={0} onMouseUp={handleClick} onKeyUp={handleKeyUp} onMouseMove={handleMouseMove} className={`main-screen ${mode && 'editable'}`}>
           {mode && <LeaveNoteText></LeaveNoteText>}
-          {notes && notes.map(note => <Note {...note} />)}
+          {notes && notes.map(note => <Note key={note.id} {...note} />)}
           {noteBoxVisibility && <NoteBox></NoteBox>}
         </div>
     </MainContext.Provider>

@@ -34,7 +34,7 @@ export default function NoteBox() {
 
     const changeNoteTypeColor = (e) => {
         setColor(e.target.value);
-        setType(e.target.text);
+        setType(e.target.selectedOptions[0].text);
     }
 
     const addNote = event => {

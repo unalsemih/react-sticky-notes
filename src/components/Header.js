@@ -11,6 +11,8 @@ function Header (props) {
         uniqueNoteTypes[item.color] = item.type;
     });
 
+    console.log(uniqueNoteTypes);
+
     return (
         <div className="header">
             {
@@ -18,7 +20,7 @@ function Header (props) {
             }
             {
 
-                Object.keys(uniqueNoteTypes).map(noteType => <NoteType noteColor={noteType} noteType={uniqueNoteTypes[noteType]} />)
+                Object.keys(uniqueNoteTypes).map(noteType => <NoteType key={noteType} noteColor={noteType} noteType={uniqueNoteTypes[noteType]} />)
             }
         </div>
 
